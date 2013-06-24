@@ -1,4 +1,4 @@
-Easymeme
+Easymeme [![Build Status](https://travis-ci.org/zachlatta/easymeme.png?branch=master)](https://travis-ci.org/zachlatta/easymeme)
 ========
 
 The easy, open source meme generator. You should totally use it.
