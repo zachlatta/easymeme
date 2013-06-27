@@ -7,6 +7,6 @@ class Meme < ActiveRecord::Base
   }
   
   validates_presence_of :title, :url
-  validates :top_text,    presence: { if: bottom_text.blank? }
-  validates :bottom_text, presence: { if: top_text.blank? }
+  validates :top_text,    presence: { unless: :bottom_text? }
+  validates :bottom_text, presence: { unless: :top_text? }
 end

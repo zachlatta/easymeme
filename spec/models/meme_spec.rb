@@ -2,10 +2,11 @@ require 'spec_helper'
 
 describe Meme do
 
-  before { @meme = Meme.new(title: "bad luck brian",
-                            top_text: "has a pet rock",
-                            bottom_text: "it runs away",
-                            url: "http://i.imgur.com/xpeoxxh.jpg") }
+  before do
+    @meme = Meme.new(title: "bad luck brian", top_text: "has a pet rock",
+                     bottom_text: "it runs away",
+                     url: "http://i.imgur.com/xpeoxxh.jpg")
+  end
 
   subject { @meme }
 
