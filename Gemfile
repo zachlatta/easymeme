@@ -10,6 +10,7 @@ gem 'will_paginate', '~> 3.0.4'
 gem 'bootstrap-will_paginate', '~> 0.0.9'
 gem 'jquery-rails', '~> 3.0.1'
 gem 'turbolinks', '~> 1.2.0'
+gem 'paperclip', '~> 3.4.2'
 
 gem 'sass-rails', '~> 4.0.0.beta1'
 gem 'coffee-rails', '~> 4.0.0.beta1'

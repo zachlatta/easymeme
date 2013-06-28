@@ -1,0 +1,12 @@
+<% if @meme.errors.any? %>
+  <div id="error_explaination">
+    <div class="alert alert-error">
+      The form contains <%= pluralize(@meme.errors.count, "error") %>.
+      <ul>
+        <% @meme.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+<% end %>

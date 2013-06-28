@@ -1,4 +1,5 @@
 Easymeme::Application.routes.draw do
+  resources :memes
 
   get "memes/new"
 

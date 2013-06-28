@@ -3,9 +3,7 @@ require 'spec_helper'
 describe Meme do
 
   before do
-    @meme = Meme.new(title: "bad luck brian", top_text: "has a pet rock",
-                     bottom_text: "it runs away",
-                     url: "http://i.imgur.com/xpeoxxh.jpg")
+    @meme = FactoryGirl.create(:meme)
   end
 
   subject { @meme }

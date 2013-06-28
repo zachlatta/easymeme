@@ -1,3 +1,19 @@
 <% provide(:title, 'New Meme') %>
 <h1>New Meme</h1>
-<p>Find me in app/views/memes/new.html.erb</p>
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@meme) do |f| %>
+      <%= render 'shared/error_messages' %>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+
+      <%= f.label :top_text %>
+      <%= f.text_field :top_text %>
+
+      <%= f.label :bottom_text %>
+      <%= f.text_field :bottom_text %>
+
+      <%= f.submit "Create Meme", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
