@@ -26,4 +26,9 @@ Easymeme::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  # This is the right path if you're developing on a Mac and installed
+  # Imagemagick with homebrew. Change it to Imagemagick's location on your
+  # computer if that's not where it's located.
+  Paperclip.options[:command_path] = "/usr/local/bin/"
 end

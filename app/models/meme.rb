@@ -6,7 +6,7 @@ class Meme < ActiveRecord::Base
     self.bottom_text = bottom_text.downcase
   }
   
-  validates_presence_of :title, :url
+  validates_presence_of :title
   validates :top_text,    presence: { unless: :bottom_text? }
   validates :bottom_text, presence: { unless: :top_text? }
 end
