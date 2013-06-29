@@ -1,2 +1,3 @@
 <% provide(:title, @meme.title) %>
 <h1><%= @meme.title.titleize %></h1>
+<%= image_tag @meme.image.url(:medium) %>

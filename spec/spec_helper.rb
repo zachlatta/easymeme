@@ -12,6 +12,10 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 # If you are not using ActiveRecord, you can remove this line.
 ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
 
+# Let's us use fixture_file_upload to upload a file for our meme factory's
+# image.
+include ActionDispatch::TestProcess
+
 RSpec.configure do |config|
   # ## Mock Framework
   #

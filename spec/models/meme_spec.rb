@@ -11,7 +11,7 @@ describe Meme do
   it { should respond_to(:title) }
   it { should respond_to(:top_text) }
   it { should respond_to(:bottom_text) }
-  it { should respond_to(:url) }
+  it { should respond_to(:image) }
 
   it { should be_valid }
 
@@ -28,5 +28,8 @@ describe Meme do
       @meme.bottom_text = " "
     }
     it { should_not be_valid }
+  end
+
+  describe "when image is not present" do
   end
 end

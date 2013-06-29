@@ -17,6 +17,7 @@ describe "meme pages" do
     before { visit meme_path(meme) }
 
     it { should have_selector('h1', meme.title.titleize) }
+    it { should have_selector('img') }
     it { should have_title(full_title(meme.title.titleize)) }
   end
 
@@ -47,6 +48,8 @@ describe "meme pages" do
         before do
           fill_in "Title", with: "Title goes here"
           fill_in "Top text", with: "This is a meme"
+
+          attach_file "Image", 'spec/fixtures/files/bad_luck_brian.png'
         end
 
         it "should create a new meme" do
@@ -69,6 +72,8 @@ describe "meme pages" do
           fill_in "Title",       with: "Bad Luck Brian"
           fill_in "Top text",    with: "Has a pet rock"
           fill_in "Bottom text", with: "Runs away"
+
+          attach_file "Image", 'spec/fixtures/files/bad_luck_brian.png'
         end
 
         it "should create a new meme" do

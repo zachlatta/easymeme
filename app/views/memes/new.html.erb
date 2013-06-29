@@ -2,7 +2,9 @@
 <h1>New Meme</h1>
 <div class="row">
   <div class="span4 offset1">
-    <%= form_for(@meme) do |f| %>
+    <%= form_for @meme, :url => memes_path, 
+      :html => { :multipart => true }  do |f| %>
+
       <%= render 'shared/error_messages' %>
       <%= f.label :title %>
       <%= f.text_field :title %>
@@ -12,6 +14,9 @@
 
       <%= f.label :bottom_text %>
       <%= f.text_field :bottom_text %>
+
+      <%= f.label :image %>
+      <%= f.file_field :image %>
 
       <%= f.submit "Create Meme", class: "btn btn-large btn-primary" %>
     <% end %>
