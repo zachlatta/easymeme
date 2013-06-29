@@ -7,8 +7,10 @@ class Meme < ActiveRecord::Base
   }
 
   has_attached_file :image, {
-    :styles => { :medium => "600x600>",
-                 :thumb => "300x300>" },
+    :styles => { :large => "800x800>",
+                 :medium => "600x600>",
+                 :small => "400x400>",
+                 :thumb => "200x200>" },
     :url => "/memes/src/:hash.:extension",
     :hash_secret => "lol_1_d0n't_c4r3_1f_y0u_kn0w_th3_s3cr3T",
   }
